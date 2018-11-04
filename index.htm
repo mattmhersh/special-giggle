@@ -10,12 +10,26 @@
   <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
   <meta name="msapplication-TileColor" content="#da532c">
   <meta name="theme-color" content="#ffffff">
+  <! — development version, includes helpful console warnings →
+  <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+  <script src="https://unpkg.com/vue-router/dist/vue-router.js"></script>
   </head>
-  <body>
+
+<body class="is-preload">
+  <div id="page-wrapper">
+    <header id="header" class="alt">
+       <li><router-link to="/">Home</router-link></li>
+       <li><router-link to="/blog">Blog</router-link></li>
+       <li><router-link to="/about">About</router-link></li>
+    </header>
+    <router-view></router-view>
     <h1>Hello My Name is Mikey Hersh.</h1>
     <h2>I love to read!</h2>
     <p>
       I like to watch tv and have my laptop
     </p>
+  </div>
+  <script src="assets/js/components.js"></script>
+  <script src="assets/js/app.js"></script>
   </body>
 </html>
